@@ -1,4 +1,4 @@
-var numero - 1;
+var numero = -1;
 
 if (numero > 0) {
     console.log("O número é positivo");
