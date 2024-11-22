@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos em JavaScript</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d1f4ff;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+
+    .content {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #3f51b5;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #3f51b5;
+      padding-left: 10px;
+    }
+
+    code {
+      background: #eef6ff;
+      color: #c7254e;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border-left: 4px solid #3f51b5;
+    }
+
+    ul {
+      list-style: disc;
+      margin-bottom: 1.5rem;
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #5c6bc0;
+      color: white;
+      margin-top: 2rem;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Objetos em JavaScript</h1>
+  </header>
+  <main>
+    <!-- Introdução -->
+    <section id="introducao" class="content">
+      <h2>O que são Objetos?</h2>
+      <p>Objetos são uma estrutura fundamental em JavaScript, permitindo armazenar dados na forma de pares chave-valor. Eles são usados para representar coisas do mundo real, como um carro, um usuário ou configurações.</p>
+    </section>
+
+    <!-- Criar Objetos -->
+    <section id="criar" class="content">
+      <h2>Como Criar Objetos</h2>
+      <p>Os objetos podem ser criados de várias formas. Aqui estão algumas das mais comuns:</p>
+      <h3>Usando Literais</h3>
+      <pre><code>const carro = {
+        marca: "Toyota",
+        modelo: "Corolla",
+        ano: 2021
+        };</code></pre>
+
+      <h3>Usando o Construtor</h3>
+      <pre><code>const pessoa = new Object();
+pessoa.nome = "Jean";
+pessoa.idade = 25;</code></pre>
+    </section>
+
+    <!-- Manipulação de Objetos -->
+    <section id="manipular" class="content">
+      <h2>Manipulando Objetos</h2>
+      <p>É possível acessar, adicionar ou remover propriedades de objetos:</p>
+      <h3>Acessando Propriedades</h3>
+      <pre><code>console.log(carro.marca); // Toyota
+console.log(carro["modelo"]); // Corolla</code></pre>
+
+      <h3>Adicionando Propriedades</h3>
+      <pre><code>carro.cor = "Prata";</code></pre>
+
+      <h3>Removendo Propriedades</h3>
+      <pre><code>delete carro.ano;</code></pre>
+    </section>
+
+    <!-- Métodos em Objetos -->
+    <section id="metodos" class="content">
+      <h2>Métodos em Objetos</h2>
+      <p>Objetos podem conter funções como propriedades. Estas funções são chamadas de métodos.</p>
+      <pre><code>const calculadora = {
+    somar: function(a, b) {
+    return a + b;
+  },
+  subtrair(a, b) {
+    return a - b;
+  }
+};
+
+console.log(calculadora.somar(5, 3)); // 8
+console.log(calculadora.subtrair(9, 4)); // 5</code></pre>
+    </section>
+
+    <!-- Conclusão -->
+    <section id="conclusao" class="content">
+      <h2>Conclusão</h2>
+      <p>Objetos são essenciais em JavaScript, ajudando a organizar dados e lógica de maneira eficiente. Dominar seu uso é um passo fundamental para se tornar um programador avançado.</p>
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido por Jean | Explorando Objetos em JavaScript!</p>
+  </footer>
+</body>
+</html>

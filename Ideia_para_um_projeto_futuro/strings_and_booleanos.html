@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strings e Booleanos - JavaScript</title>
   <style>
-    /* Estilização básica para layout agradável */
     * {
       margin: 0;
       padding: 0;
@@ -103,7 +102,7 @@
       margin-top: 2rem;
       box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     }
-    
+
     @media (max-width: 768px) {
         header h1 {
           font-size: 2rem;
@@ -147,8 +146,8 @@
         <li><strong>Imutabilidade:</strong> Strings não podem ser alteradas após criadas. Alterações geram uma nova string.</li>
         <li><strong>Interpolação:</strong> Com template literals, podemos inserir valores diretamente em strings:
           <pre><code>const nome = "Jean";
-const mensagem = `Bem-vindo, ${nome}!`;
-console.log(mensagem); // Bem-vindo, Jean!</code></pre>
+          const mensagem = `Bem-vindo, ${nome}!`;
+          console.log(mensagem); // Bem-vindo, Jean!</code></pre>
         </li>
         <li><strong>Métodos úteis:</strong>
           <ul>
@@ -163,10 +162,10 @@ console.log(mensagem); // Bem-vindo, Jean!</code></pre>
 
       <h3>Exemplos Comparativos</h3>
       <pre><code>// Comparando Strings
-const texto = "Olá, Mundo!";
-console.log(texto.length); // 12
-console.log(texto.toUpperCase()); // "OLÁ, MUNDO!"
-console.log(texto.includes("Mundo")); // true</code></pre>
+      const texto = "Olá, Mundo!";
+      console.log(texto.length); // 12
+      console.log(texto.toUpperCase()); // "OLÁ, MUNDO!"
+      console.log(texto.includes("Mundo")); // true</code></pre>
     </section>
 
     <!-- Booleanos -->
@@ -200,16 +199,16 @@ console.log(texto.includes("Mundo")); // true</code></pre>
 
       <h3>Exemplos</h3>
       <pre><code>// Comparações
-console.log(10 > 5); // true
-console.log(10 === "10"); // false
+      console.log(10 > 5); // true
+      console.log(10 === "10"); // false
 
-// Valores truthy e falsy
-const vazio = "";
-if (vazio) {
-  console.log("Truthy");
-} else {
-  console.log("Falsy");
-} // Saída: "Falsy"</code></pre>
+      // Valores truthy e falsy
+      const vazio = "";
+      if (vazio) {
+        console.log("Truthy");
+      } else {
+        console.log("Falsy");
+      } // Saída: "Falsy"</code></pre>
     </section>
   </main>
   <footer>
