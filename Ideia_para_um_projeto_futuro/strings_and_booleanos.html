@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings e Booleanos - JavaScript</title>
+  <style>
+    /* Estilização básica para layout agradável */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0077b6, #0096c7);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+
+    .content {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #0077b6;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #0077b6;
+      padding-left: 10px;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      color: #005f8a;
+      font-size: 1.4rem;
+    }
+
+    ul, p {
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    ul ul {
+      list-style: circle;
+      padding-left: 20px;
+    }
+
+    code {
+      background: #eef6ff;
+      color: #c7254e;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border-left: 4px solid #0077b6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0096c7;
+      color: white;
+      margin-top: 2rem;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        main {
+          padding: 1rem;
+        }
+
+        .content {
+          padding: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Strings e Booleanos em JavaScript</h1>
+  </header>
+  <main>
+    <!-- Strings -->
+    <section class="content">
+      <h2>Strings</h2>
+      <p>Strings são cadeias de caracteres usadas para representar texto. Elas podem ser delimitadas por:</p>
+      <ul>
+        <li><code>"aspas duplas"</code></li>
+        <li><code>'aspas simples'</code></li>
+        <li><code>`crases`</code> (Template Literals, que permitem interpolação e quebras de linha).</li>
+      </ul>
+
+      <h3>Características das Strings</h3>
+      <ul>
+        <li><strong>Imutabilidade:</strong> Strings não podem ser alteradas após criadas. Alterações geram uma nova string.</li>
+        <li><strong>Interpolação:</strong> Com template literals, podemos inserir valores diretamente em strings:
+          <pre><code>const nome = "Jean";
+const mensagem = `Bem-vindo, ${nome}!`;
+console.log(mensagem); // Bem-vindo, Jean!</code></pre>
+        </li>
+        <li><strong>Métodos úteis:</strong>
+          <ul>
+            <li><code>length</code>: Retorna o tamanho da string.</li>
+            <li><code>toUpperCase()</code> e <code>toLowerCase()</code>: Alteram o texto para maiúsculas ou minúsculas.</li>
+            <li><code>includes(substring)</code>: Verifica se a string contém outra string.</li>
+            <li><code>replace(antigo, novo)</code>: Substitui parte de uma string.</li>
+            <li><code>split(separador)</code>: Divide uma string em partes e retorna um array.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Exemplos Comparativos</h3>
+      <pre><code>// Comparando Strings
+const texto = "Olá, Mundo!";
+console.log(texto.length); // 12
+console.log(texto.toUpperCase()); // "OLÁ, MUNDO!"
+console.log(texto.includes("Mundo")); // true</code></pre>
+    </section>
+
+    <!-- Booleanos -->
+    <section class="content">
+      <h2>Booleanos</h2>
+      <p>Os valores booleanos representam apenas dois estados: <strong>verdadeiro</strong> (<code>true</code>) e <strong>falso</strong> (<code>false</code>).</p>
+
+      <h3>Características</h3>
+      <ul>
+        <li>Comumente usados para controle de fluxo (ex.: em condições).</li>
+        <li>Podem ser gerados por comparações e operadores lógicos.</li>
+      </ul>
+
+      <h3>Operadores Comuns</h3>
+      <ul>
+        <li><code>==</code>: Igualdade de valor.</li>
+        <li><code>===</code>: Igualdade de valor e tipo (estritamente igual).</li>
+        <li><code>!=</code>: Diferença de valor.</li>
+        <li><code>!==</code>: Diferença de valor e tipo.</li>
+        <li><code>&&</code>: E lógico (AND).</li>
+        <li><code>||</code>: Ou lógico (OR).</li>
+        <li><code>!</code>: Negação lógica (NOT).</li>
+      </ul>
+
+      <h3>Valores Truthy e Falsy</h3>
+      <p>Os valores booleanos também são inferidos a partir de outros tipos:</p>
+      <ul>
+        <li><strong>Falsy:</strong> <code>false</code>, <code>0</code>, <code>""</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>.</li>
+        <li><strong>Truthy:</strong> Todos os outros valores, como números diferentes de zero, strings não vazias, etc.</li>
+      </ul>
+
+      <h3>Exemplos</h3>
+      <pre><code>// Comparações
+console.log(10 > 5); // true
+console.log(10 === "10"); // false
+
+// Valores truthy e falsy
+const vazio = "";
+if (vazio) {
+  console.log("Truthy");
+} else {
+  console.log("Falsy");
+} // Saída: "Falsy"</code></pre>
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido por Jean | Aprendendo mais sobre JavaScript!</p>
+  </footer>
+</body>
+</html>
