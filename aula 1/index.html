@@ -10,24 +10,7 @@
     <h1 id="title">Olá, mundo</h1>
     <p class="descricao">Isso e uma pagina antes do DOM</p>
     <button id="botao">Clique para ativar</button>
-
-    <script>
-        //selecionando os elementos para serem alterados
-        let title = document.getElementById("title");
-        let botao = document.getElementById("botao");
-        let descricao = document.querySelector(".descricao");
-
-        //evento que acontece apos o clique do botao
-        botao.addEventListener("click", function() {
-            title.innerHTML = "Foi malipulado com o DOM";
-
-            descricao.style.color = "red";
-            descricao.style.fontSize = "2em";
-
-            descricao.innerHTML = "O conteudo tambem foi alterado";
-
-            title.classList.toggle("highlight");
-        });
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
