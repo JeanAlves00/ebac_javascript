@@ -4,6 +4,7 @@
 
 //criando a classe retangulo
 class retangulo {
+
     constructor(largura, altura) {
         this.largura = largura;
         this.altura = altura;
@@ -17,4 +18,4 @@ class retangulo {
 
 //instancia da classe retangulo que chama o metodo calcularArea e retorna para o usuario a area
 const meuRetangulo = new retangulo(5, 3);
-console.log(meuRetangulo.calcularArea());//retorno ao usuario
+console.log(meuRetangulo.calcularArea());//retorno ao usuario'
