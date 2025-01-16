@@ -36,4 +36,6 @@ p1.adicionarNota(10);
 p1.adicionarNota(5);
 p1.adicionarNota(8);
 
+// Descrever o usuário
+
 console.log(p1.descrever());
