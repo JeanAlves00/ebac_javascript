@@ -41,3 +41,4 @@ console.log("Soma:", resultados.soma);
 console.log("Subtração:", resultados.subtracao);
 console.log("Multiplicação:", resultados.multiplicacao);
 console.log("Divisão:", resultados.divisao);
+ 
