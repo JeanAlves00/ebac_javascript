@@ -1,0 +1,109 @@
+/* Estilo geral */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e9ecef;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal */
+div {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  color: #343a40;
+  font-size: 26px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Input */
+input[type="text"] {
+  width: 75%;
+  padding: 12px;
+  margin-right: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0056b3;
+}
+
+/* Botão */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+/* Lista de tarefas */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+li {
+  background-color: #f8f9fa;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #495057;
+}
+
+li:hover {
+  background-color: #e9ecef;
+}
+
+/* Estilo adicional para um ícone de "remover" no futuro */
+li button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+}
+
+li button:hover {
+  color: #a71d2a;
+}
