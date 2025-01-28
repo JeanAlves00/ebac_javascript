@@ -1,9 +1,10 @@
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';
 import CurrentWeather from './components/CurrentWeather';
 import WeatherForecast from './components/WeatherForecast';
-import WeatherDetails from './components/WeatherDeatils';
+import WeatherDetails from './components/WeatherDetails';
 
 const App = () => {
     const currentWeather = {
@@ -24,12 +25,10 @@ const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto', textAlign: 'center' }}>
+            <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
                 <CurrentWeather 
                   temperature={currentWeather.temperature}
                   location={currentWeather.location}
-                  humidity={currentWeather.humidity}
-                  windSpeed={currentWeather.windSpeed}
                 />
                 <WeatherDetails 
                   humidity={currentWeather.humidity}
