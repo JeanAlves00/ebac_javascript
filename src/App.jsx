@@ -8,7 +8,7 @@ import WeatherDetails from './components/WeatherDeatils';
 const App = () => {
     const currentWeather = {
         temperature: 22,
-        location: "New York",
+        location: "Rolim de Moura",
         humidity: 60,
         windSpeed: 15,
         precipitation: 10,
@@ -16,6 +16,9 @@ const App = () => {
 
     const forecastData = [
         { date: "2021-09-06", minTemp: 19, maxTemp: 23 },
+        { date: "2021-09-07", minTemp: 20, maxTemp: 24 },
+        { date: "2021-09-08", minTemp: 21, maxTemp: 25 },
+        { date: "2021-09-09", minTemp: 22, maxTemp: 26 },
         { date: "2021-09-07", minTemp: 20, maxTemp: 24 },
         { date: "2021-09-08", minTemp: 21, maxTemp: 25 },
         { date: "2021-09-09", minTemp: 22, maxTemp: 26 },

@@ -27,9 +27,9 @@ const DetailItem = styled.p`
 const WeatherDetails = ({ humidity, windSpeed, precipitation }) => {
     return (
         <DetailsContainer>
-            <DetailItem>Humidity: {humidity}%</DetailItem>
-            <DetailItem>Wind Speed: {windSpeed} km/h</DetailItem>
-            <DetailItem>Precipitation: {precipitation} mm</DetailItem>
+            <DetailItem>Humidade: {humidity}%</DetailItem>
+            <DetailItem>Velocidade do Vento: {windSpeed} km/h</DetailItem>
+            <DetailItem>Precipitação: {precipitation} mm</DetailItem>
         </DetailsContainer>
     );
 };

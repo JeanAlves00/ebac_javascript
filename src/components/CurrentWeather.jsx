@@ -41,8 +41,8 @@ const CurrentWeather = ({ temperature, location, humidity, windSpeed }) => {
             <Location>{location}</Location>
             <Temp>{temperature}°C</Temp>
             <Details>
-                <p>Humidity: {humidity}%</p>
-                <p>Wind Speed: {windSpeed} km/h</p>
+                <p>Humidade: {humidity}%</p>
+                <p>Velocidade do Vento: {windSpeed} km/h</p>
             </Details>
         </Container>
     );
