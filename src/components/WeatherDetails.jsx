@@ -24,12 +24,11 @@ const DetailItem = styled.p`
     font-size: 16px;
 `;
 
-const WeatherDetails = ({ humidity, windSpeed, precipitation }) => {
+const WeatherDetails = ({ humidity, windSpeed }) => {
     return (
         <DetailsContainer>
             <DetailItem>Humidade: {humidity}%</DetailItem>
             <DetailItem>Velocidade do Vento: {windSpeed} km/h</DetailItem>
-            <DetailItem>Precipitação: {precipitation} mm</DetailItem>
         </DetailsContainer>
     );
 };
@@ -37,7 +36,6 @@ const WeatherDetails = ({ humidity, windSpeed, precipitation }) => {
 WeatherDetails.propTypes = {
     humidity: PropTypes.number.isRequired,
     windSpeed: PropTypes.number.isRequired,
-    precipitation: PropTypes.number.isRequired
 };
 
 export default WeatherDetails;
