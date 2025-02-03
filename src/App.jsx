@@ -1,28 +1,47 @@
+import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';
 import CurrentWeather from './components/CurrentWeather';
 import WeatherForecast from './components/WeatherForecast';
 import WeatherDetails from './components/WeatherDeatils';
+import { getCurrentWeather, getWeatherForecast } from './services/weatherService';
 
 const App = () => {
-    const currentWeather = {
-        temperature: 22,
-        location: "Rolim de Moura",
-        humidity: 60,
-        windSpeed: 15,
-        precipitation: 10,
-    };
+    const [currentWeather, setCurrentWeather] = useState(null);
+    const [forecastData, setForecastData] = useState([]);
 
-    const forecastData = [
-        { date: "2021-09-06", minTemp: 19, maxTemp: 23 },
-        { date: "2021-09-07", minTemp: 20, maxTemp: 24 },
-        { date: "2021-09-08", minTemp: 21, maxTemp: 25 },
-        { date: "2021-09-09", minTemp: 22, maxTemp: 26 },
-        { date: "2021-09-07", minTemp: 20, maxTemp: 24 },
-        { date: "2021-09-08", minTemp: 21, maxTemp: 25 },
-        { date: "2021-09-09", minTemp: 22, maxTemp: 26 },
-    ];
+    useEffect(() => {
+        const fetchWeatherData = async () => {
+            try {
+                const cityId = '76940-000'; // Substitua pelo ID da sua cidade
+                const currentWeatherData = await getCurrentWeather(cityId);
+                const forecastData = await getWeatherForecast(cityId);
+
+                setCurrentWeather({
+                    temperature: currentWeatherData.data.temperature,
+                    location: currentWeatherData.name,
+                    humidity: currentWeatherData.data.humidity,
+                    windSpeed: currentWeatherData.data.wind_velocity,
+                    precipitation: currentWeatherData.data.rain.precipitation,
+                });
+
+                setForecastData(forecastData.data.map(day => ({
+                    date: day.date,
+                    minTemp: day.temperature.min,
+                    maxTemp: day.temperature.max,
+                })));
+            } catch (error) {
+                console.error('Erro ao buscar dados do clima:', error);
+            }
+        };
+
+        fetchWeatherData();
+    }, []);
+
+    if (!currentWeather) {
+        return <div>Carregando...</div>;
+    }
 
     return (
         <ThemeProvider theme={theme}>
